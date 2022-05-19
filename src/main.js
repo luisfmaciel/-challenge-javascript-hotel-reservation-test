@@ -2,10 +2,6 @@ const Lakewood = require('./models/Lakewood');
 const Bridgewood = require('./models/Bridgewood');
 const Ridgewood = require('./models/Ridgewood.js');
 
-const test = "Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)";
-const test1 = "Regular: 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)";
-const test2 = "Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)";
-
 function getCheapestHotel(input) { //DO NOT change the function's name.
     const hotels = [];
     let bestHotel = [];
@@ -43,9 +39,5 @@ function getDays(input) {
 function getClientType(input) {
     return input.substring(0, input.indexOf(":"));
 }
-
-console.log(getCheapestHotel(test));
-console.log(getCheapestHotel(test1));
-console.log(getCheapestHotel(test2));
 
 exports.getCheapestHotel = getCheapestHotel
