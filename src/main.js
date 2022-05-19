@@ -16,17 +16,13 @@ function getCheapestHotel(input) { //DO NOT change the function's name.
 
     hotels.push(lakewood, bridgewood, ridgewood);
 
-    const lowestFee = Math.min(
-        lakewood.calculateFees(),
-        bridgewood.calculateFees(),
-        ridgewood.calculateFees()
-    );
+    const lowestFee = Math.min(...hotels.map((hotel) => hotel.calculateFees()));
 
     bestHotel = hotels.filter((hotel) => hotel.calculateFees() === lowestFee);
 
     if (bestHotel.length > 1) {
         const bestRating = Math.max(...bestHotel.map((hotel) => hotel.rating));
-    
+
         bestHotel = bestHotel.filter((hotel) => hotel.rating === bestRating);
     }
 
